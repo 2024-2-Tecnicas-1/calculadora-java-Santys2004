@@ -2,10 +2,6 @@ package com.danielsanchez.calculadorajava;
 
 import java.util.Scanner;
 
-/**
- *
- * @author danielsanchez
- */
 public class Calculadora {
     public static double calcular(int numero1, int numero2, char operacion) {
         double respuesta = 0;
@@ -26,7 +22,14 @@ public class Calculadora {
                 // Operación división:
                 respuesta = (double) numero1 / numero2;
                 break;
-            
+             case '^' :
+                // Operación potencia:
+                respuesta = Math.pow(numero1, numero2);
+                break;
+                 case '%' :
+                // Operación modulo:
+                respuesta = numero1 % numero2;
+                break;
             // TODO: DEBES CREAR AQUÍ LOS CASES PARA LA OPERACIÓN DE LA POTENCIA Y EL MÓDULO.
                 
             default:
